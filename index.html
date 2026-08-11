@@ -5,15 +5,13 @@
 ║   CLIENT:     GreenCity Enterprises (GCE)                    ║
 ║   BRAND:      TMF – Think. Make. Flow.                      ║
 ║   DEVELOPER:  Towa Munwu Fohtung                             ║
-║   ROLE:       Lead Web Developer & Designer                  ║
-║   EMAIL:      towafohtung1@gmail.com                                  ║
-║   PHONE:      +237 683009211                                              ║
+║   EMAIL:      towafohtung1@gmail.com                         ║
+║   PHONE:      +237 683009211                                 ║
 ║   DATE:       2026                                           ║
 ║   VERSION:    1.0                                            ║
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
 -->
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>GreenCity Enterprises – Home</title>
 
-     <!-- TMF Developer Meta Tags -->
+    <!-- TMF Developer Meta Tags -->
     <meta name="author" content="TMF – Think. Make. Flow." />
     <meta name="developer" content="TMF (Towa Munwu Fohtung)" />
     <meta name="designer" content="TMF" />
@@ -30,21 +28,27 @@
 
     <link rel="stylesheet" href="assets/css/style-gce.css" />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <style>
-        /* Extra styles to make it more compact */
+        /* ===== UMBRELLA SPECIFIC STYLES ===== */
         .umbrella-hero {
             min-height: 70vh !important;
             padding: 40px 20px !important;
         }
-        .umbrella-section {
-            padding: 50px 0 !important;
-        }
+
         .umbrella-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 30px;
             margin: 30px 0;
         }
+
         .umbrella-card {
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(8px);
@@ -55,24 +59,29 @@
             transition: all 0.3s ease;
             color: #fff;
         }
+
         .umbrella-card:hover {
             transform: translateY(-6px);
             background: rgba(255, 255, 255, 0.15);
         }
+
         .umbrella-card .icon {
-            font-size: 48px;
+            font-size: 56px;
             display: block;
             margin-bottom: 12px;
         }
+
         .umbrella-card h3 {
             font-size: 1.3rem;
             margin-bottom: 8px;
         }
+
         .umbrella-card p {
             font-size: 0.9rem;
             opacity: 0.8;
             margin-bottom: 16px;
         }
+
         .btn-outline-light {
             background: transparent;
             border: 2px solid #fff;
@@ -83,10 +92,12 @@
             transition: all 0.3s ease;
             display: inline-block;
         }
+
         .btn-outline-light:hover {
             background: #fff;
             color: #1b4d1b;
         }
+
         .btn-outline-orange {
             background: transparent;
             border: 2px solid #f57c00;
@@ -97,16 +108,98 @@
             transition: all 0.3s ease;
             display: inline-block;
         }
+
         .btn-outline-orange:hover {
             background: #f57c00;
             color: #fff;
         }
+
         .compact-footer {
             padding: 30px 0 !important;
         }
-        .compact-footer .footer-grid {
-            gap: 20px !important;
+
+        .contact-icon {
+            margin-right: 6px;
+            color: #f57c00;
         }
+
+        /* ===== 3D ICON EFFECTS ===== */
+        .icon-3d-float {
+            display: inline-block;
+            animation: float3d 3s ease-in-out infinite;
+            transform-style: preserve-3d;
+        }
+
+        @keyframes float3d {
+            0%, 100% {
+                transform: perspective(800px) rotateX(5deg) rotateY(-10deg) translateY(0px);
+            }
+            50% {
+                transform: perspective(800px) rotateX(8deg) rotateY(-15deg) translateY(-10px);
+            }
+        }
+
+        .icon-3d-pop {
+            display: inline-block;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: perspective(600px) rotateX(8deg) rotateY(-12deg);
+            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+        }
+
+        .icon-3d-pop:hover {
+            transform: perspective(600px) rotateX(0deg) rotateY(0deg) translateZ(40px) scale(1.2);
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+        }
+
+        .icon-3d-glow {
+            display: inline-block;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 0 20px rgba(245, 124, 0, 0.2));
+        }
+
+        .icon-3d-glow:hover {
+            transform: perspective(600px) rotateX(5deg) rotateY(10deg) scale(1.15);
+            filter: drop-shadow(0 0 40px rgba(245, 124, 0, 0.6));
+        }
+
+        /* ===== 3D COLOR GRADIENTS ===== */
+        .icon-gradient-gold {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .icon-gradient-green {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .icon-gradient-fire {
+            background: linear-gradient(135deg, #f12711, #f5af19);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ===== 3D SHADOW ===== */
+        .icon-shadow-3d {
+            display: inline-block;
+            text-shadow: 
+                0 1px 0 #ccc,
+                0 2px 0 #c9c9c9,
+                0 3px 0 #bbb,
+                0 4px 0 #b9b9b9,
+                0 5px 0 #aaa,
+                0 6px 1px rgba(0,0,0,.1),
+                0 0 5px rgba(0,0,0,.1),
+                0 1px 3px rgba(0,0,0,.3),
+                0 3px 5px rgba(0,0,0,.2),
+                0 5px 10px rgba(0,0,0,.25);
+        }
+
         @media (max-width: 768px) {
             .umbrella-grid {
                 grid-template-columns: 1fr;
@@ -117,53 +210,84 @@
 <body>
 
     <!-- ===== HERO ===== -->
-    <section class="hero umbrella-hero">
+    <section class="hero umbrella-hero" data-aos="fade-in">
         <div class="hero-overlay"></div>
         <div class="hero-content">
+
+            <!-- Logo Badge with 3D Leaf -->
             <div class="logo-badge">
-                <span class="logo-icon">🌿</span>
+                <span class="logo-icon">
+                    <i class="fas fa-leaf icon-3d-float icon-gradient-green" style="font-size:32px;"></i>
+                </span>
                 <span class="logo-text">GCE</span>
             </div>
+
             <h1>GreenCity <span class="highlight">Enterprises</span></h1>
             <p class="tagline">Empowering Cameroon Through Sustainable Food &amp; Energy</p>
             <div class="divider"></div>
+
             <p class="sub-tagline" style="font-size:1rem; margin-bottom:30px;">
-                <span class="green">🌱 GreenCity Foods</span> 
-                <span class="orange" style="margin:0 12px;">✦</span> 
-                <span class="orange">🔥 GreenCity Briquettes</span>
+                <span class="green">
+                    <i class="fas fa-seedling" style="margin-right:6px; color:#81c784;"></i> GreenCity Foods
+                </span>
+                <span class="orange" style="margin:0 12px;">
+                    <i class="fas fa-circle" style="font-size:0.3rem; vertical-align:middle; color:#f57c00;"></i>
+                </span>
+                <span class="orange">
+                    <i class="fas fa-fire" style="margin-right:6px; color:#f57c00;"></i> GreenCity Briquettes
+                </span>
             </p>
-            
-            <!-- TWO DIVISIONS CARDS -->
+
+            <!-- TWO DIVISIONS CARDS with 3D Icons -->
             <div class="umbrella-grid">
                 <!-- Foods Card -->
-                <div class="umbrella-card">
-                    <span class="icon">🌱</span>
+                <div class="umbrella-card" data-aos="flip-up" data-aos-delay="100">
+                    <span class="icon">
+                        <i class="fas fa-seedling icon-3d-pop icon-gradient-green"></i>
+                    </span>
                     <h3>GreenCity Foods</h3>
                     <p>Premium freeze-dried foods, flours, spices &amp; sauces</p>
-                    <a href="https://towafohtung1-jpg.github.io/greencity-foods/" target="_blank" class="btn-outline-light">Visit Foods →</a>
+                    <a href="https://towafohtung1-jpg.github.io/greencity-foods/" target="_blank" class="btn-outline-light">
+                        Visit Foods <i class="fas fa-arrow-right fa-xs"></i>
+                    </a>
                 </div>
-                
+
                 <!-- Briquettes Card -->
-                <div class="umbrella-card">
-                    <span class="icon">🔥</span>
+                <div class="umbrella-card" data-aos="flip-up" data-aos-delay="200">
+                    <span class="icon">
+                        <i class="fas fa-fire icon-3d-glow icon-gradient-fire icon-shadow-3d"></i>
+                    </span>
                     <h3>GreenCity Briquettes</h3>
                     <p>Industrial stoves, eco-friendly charcoal &amp; waste-to-energy</p>
-                    <a href="https://towafohtung1-jpg.github.io/greencity-briquettes/" target="_blank" class="btn-outline-orange">Visit Briquettes →</a>
+                    <a href="https://towafohtung1-jpg.github.io/greencity-briquettes/" target="_blank" class="btn-outline-orange">
+                        Visit Briquettes <i class="fas fa-arrow-right fa-xs"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- ===== CONTACT BAR (Short) ===== -->
-    <section style="padding:30px 0; background:#1b2a1b; text-align:center; color:rgba(255,255,255,0.7);">
+    <!-- ===== CONTACT BAR ===== -->
+    <section style="padding:30px 0; background:#1b2a1b; text-align:center; color:rgba(255,255,255,0.7);" data-aos="fade-up" data-aos-offset="50">
         <div class="container">
             <p style="font-size:0.95rem;">
-                📍 Kumba, Cameroon &nbsp;|&nbsp; 📞 +237 XXXX XXXX &nbsp;|&nbsp; ✉️ greencitybriq@gmail.com
+                <i class="fas fa-map-marker-alt contact-icon"></i> Kumba, Cameroon
+                <span style="color:rgba(255,255,255,0.15); margin:0 10px;">|</span>
+                <i class="fas fa-phone contact-icon"></i> +237 XXXX XXXX
+                <span style="color:rgba(255,255,255,0.15); margin:0 10px;">|</span>
+                <i class="fas fa-envelope contact-icon"></i> greencitybriq@gmail.com
             </p>
-            <div style="margin-top:8px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem;">TikTok</a>
-                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Instagram</a>
-                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Facebook</a>
+            <div style="margin-top:8px; display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem; transition:color 0.3s;">
+                    <i class="fab fa-tiktok" style="margin-right:6px;"></i> TikTok
+                </a>
+                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem; transition:color 0.3s;">
+                    <i class="fab fa-instagram" style="margin-right:6px;"></i> Instagram
+                </a>
+                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem; transition:color 0.3s;">
+                    <i class="fab fa-facebook" style="margin-right:6px;"></i> Facebook
+                </a>
             </div>
         </div>
     </section>
@@ -172,34 +296,45 @@
     <footer class="footer compact-footer" style="background:#0f1a0f; padding:20px 0;">
         <div class="container" style="text-align:center;">
             <p style="font-size:0.8rem; color:rgba(255,255,255,0.3);">
-                &copy; 2026 GreenCity Enterprises – All rights reserved
+                <i class="far fa-copyright" style="margin-right:4px;"></i> 2026 GreenCity Enterprises – All rights reserved
             </p>
+
+            <!-- ===== TMF DEVELOPER CREDIT ===== -->
+            <div style="margin-top:10px; padding-top:10px; border-top:1px solid rgba(255,255,255,0.06);">
+                <p style="font-size:0.7rem; color:rgba(255,255,255,0.25);">
+                    Crafted with <i class="fas fa-heart" style="color:#e74c3c; margin:0 4px;"></i> by
+                    <a href="#" target="_blank"
+                       style="color:#f57c00; text-decoration:none; font-weight:600;">
+                       TMF
+                    </a>
+                    <span style="color:rgba(255,255,255,0.08); margin:0 6px;">|</span>
+                    <span style="color:rgba(255,255,255,0.12); font-size:0.6rem; font-style:italic;">
+                        Think. Make. Flow.
+                    </span>
+                </p>
+            </div>
         </div>
-
-        <!-- ===== TMF DEVELOPER CREDIT ===== -->
-<div style="margin-top:10px; padding-top:10px; border-top:1px solid rgba(255,255,255,0.06);">
-    <p style="font-size:0.7rem; color:rgba(255,255,255,0.25);">
-        Crafted with <span style="color:#e74c3c;">♥</span> by 
-        <a href="#" target="_blank" 
-           style="color:#f57c00; text-decoration:none; font-weight:600;">
-           TMF
-        </a>
-        <span style="color:rgba(255,255,255,0.08); margin:0 6px;">|</span>
-        <span style="color:rgba(255,255,255,0.12); font-size:0.6rem; font-style:italic;">
-            Think. Make. Flow.
-        </span>
-    </p>
-</div>
-
-<!-- ===== TMF CONSOLE SIGNATURE ===== -->
-<script>
-    console.log('%c TMF ', 'background:#2e7d32;color:#fff;font-size:22px;font-weight:800;padding:10px 20px;border-radius:4px 0 0 4px;');
-    console.log('%c Think. Make. Flow. ', 'background:#f57c00;color:#fff;font-size:14px;padding:10px 20px;border-radius:0 4px 4px 0;');
-    console.log('%c Towa Munwu Fohtung • Lead Web Developer & Designer ', 'background:#1e2a1e;color:#ccc;font-size:12px;padding:8px 20px;');
-    console.log('%c 📧 towafohtung1@gmail.com | 📞 +237 683009211 ', 'background:#1e2a1e;color:#f57c00;font-size:12px;padding:8px 20px;');
-    console.log('%c ⚡ Built with ❤️ in Cameroon ', 'background:#0f1a0f;color:#888;font-size:11px;padding:6px 20px;border-radius:0 0 4px 4px;');
-</script>
     </footer>
+
+    <!-- ===== TMF CONSOLE SIGNATURE ===== -->
+    <script>
+        console.log('%c TMF ', 'background:#2e7d32;color:#fff;font-size:22px;font-weight:800;padding:10px 20px;border-radius:4px 0 0 4px;');
+        console.log('%c Think. Make. Flow. ', 'background:#f57c00;color:#fff;font-size:14px;padding:10px 20px;border-radius:0 4px 4px 0;');
+        console.log('%c Towa Munwu Fohtung • Lead Web Developer & Designer ', 'background:#1e2a1e;color:#ccc;font-size:12px;padding:8px 20px;');
+        console.log('%c 📧 towafohtung1@gmail.com | 📞 +237 683009211 ', 'background:#1e2a1e;color:#f57c00;font-size:12px;padding:8px 20px;');
+        console.log('%c ⚡ Built with ❤️ in Cameroon ', 'background:#0f1a0f;color:#888;font-size:11px;padding:6px 20px;border-radius:0 0 4px 4px;');
+    </script>
+
+    <!-- AOS Animation Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
 
 </body>
 </html>
