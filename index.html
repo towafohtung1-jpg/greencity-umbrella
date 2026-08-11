@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>GreenCity Enterprises – Home</title>
+    <link rel="stylesheet" href="../assets/css/style-gce.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet"/>
+    <style>
+        /* Extra styles to make it more compact */
+        .umbrella-hero {
+            min-height: 70vh !important;
+            padding: 40px 20px !important;
+        }
+        .umbrella-section {
+            padding: 50px 0 !important;
+        }
+        .umbrella-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        .umbrella-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 30px 24px;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+            color: #fff;
+        }
+        .umbrella-card:hover {
+            transform: translateY(-6px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .umbrella-card .icon {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 12px;
+        }
+        .umbrella-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .umbrella-card p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 16px;
+        }
+        .btn-outline-light {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-outline-light:hover {
+            background: #fff;
+            color: #1b4d1b;
+        }
+        .btn-outline-orange {
+            background: transparent;
+            border: 2px solid #f57c00;
+            color: #f57c00;
+            padding: 10px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-outline-orange:hover {
+            background: #f57c00;
+            color: #fff;
+        }
+        .compact-footer {
+            padding: 30px 0 !important;
+        }
+        .compact-footer .footer-grid {
+            gap: 20px !important;
+        }
+        @media (max-width: 768px) {
+            .umbrella-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero umbrella-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="logo-badge">
+                <span class="logo-icon">🌿</span>
+                <span class="logo-text">GCE</span>
+            </div>
+            <h1>GreenCity <span class="highlight">Enterprises</span></h1>
+            <p class="tagline">Empowering Cameroon Through Sustainable Food &amp; Energy</p>
+            <div class="divider"></div>
+            <p class="sub-tagline" style="font-size:1rem; margin-bottom:30px;">
+                <span class="green">🌱 GreenCity Foods</span> 
+                <span class="orange" style="margin:0 12px;">✦</span> 
+                <span class="orange">🔥 GreenCity Briquettes</span>
+            </p>
+            
+            <!-- TWO DIVISIONS CARDS -->
+            <div class="umbrella-grid">
+                <!-- Foods Card -->
+                <div class="umbrella-card">
+                    <span class="icon">🌱</span>
+                    <h3>GreenCity Foods</h3>
+                    <p>Premium freeze-dried foods, flours, spices &amp; sauces</p>
+                    <a href="https://YOUR-USERNAME.github.io/greencity-foods/" target="_blank" class="btn-outline-light">Visit Foods →</a>
+                </div>
+                
+                <!-- Briquettes Card -->
+                <div class="umbrella-card">
+                    <span class="icon">🔥</span>
+                    <h3>GreenCity Briquettes</h3>
+                    <p>Industrial stoves, eco-friendly charcoal &amp; waste-to-energy</p>
+                    <a href="https://YOUR-USERNAME.github.io/greencity-briquettes/" target="_blank" class="btn-outline-orange">Visit Briquettes →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT BAR (Short) ===== -->
+    <section style="padding:30px 0; background:#1b2a1b; text-align:center; color:rgba(255,255,255,0.7);">
+        <div class="container">
+            <p style="font-size:0.95rem;">
+                📍 Kumba, Cameroon &nbsp;|&nbsp; 📞 +237 XXXX XXXX &nbsp;|&nbsp; ✉️ greencitybriq@gmail.com
+            </p>
+            <div style="margin-top:8px; display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem;">TikTok</a>
+                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Instagram</a>
+                <a href="#" style="color:rgba(255,255,255,0.5); font-size:0.85rem;">Facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer compact-footer" style="background:#0f1a0f; padding:20px 0;">
+        <div class="container" style="text-align:center;">
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.3);">
+                &copy; 2026 GreenCity Enterprises – All rights reserved
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
