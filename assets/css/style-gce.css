@@ -92,6 +92,13 @@ a {
     letter-spacing: 2px;
 }
 
+.logo img {
+    height: 90px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
+}
+
 .hero h1 {
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
@@ -564,6 +571,7 @@ a {
         grid-template-columns: 1fr;
     }
 }
+<<<<<<< HEAD
 
 /* ============================================================ */
 /* GALLERY RESPONSIVE */
@@ -598,3 +606,5 @@ a {
         font-size: 0.55rem;
     }
 }
+=======
+>>>>>>> 4eaaf78d80abcb96d28ad4ac186aa1ff823794ce
