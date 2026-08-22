@@ -426,6 +426,84 @@ a {
         height: 35px;
     }
 }
+/* ============================================================ */
+/* GALLERY */
+/* ============================================================ */
+
+.gallery-section {
+    padding: 60px 0;
+    background: #fafaf8;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #e8f5e9;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 2px dashed #81c784;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.gallery-placeholder:hover {
+    background: #c8e6c9;
+    border-color: #2e7d32;
+}
+
+.gallery-placeholder i {
+    font-size: 32px;
+    margin-bottom: 8px;
+    opacity: 0.5;
+}
+
+.gallery-placeholder span {
+    font-size: 0.75rem;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.gallery-note {
+    text-align: center;
+    margin-top: 24px;
+    padding: 12px;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.gallery-note i {
+    color: #f57c00;
+    margin-right: 6px;
+}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -484,5 +562,39 @@ a {
     
     .raw-materials-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================ */
+/* GALLERY RESPONSIVE */
+/* ============================================================ */
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .gallery-placeholder i {
+        font-size: 24px;
+    }
+    
+    .gallery-placeholder span {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .gallery-placeholder i {
+        font-size: 20px;
+    }
+    
+    .gallery-placeholder span {
+        font-size: 0.55rem;
     }
 }
