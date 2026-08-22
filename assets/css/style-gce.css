@@ -571,7 +571,6 @@ a {
         grid-template-columns: 1fr;
     }
 }
-<<<<<<< HEAD
 
 /* ============================================================ */
 /* GALLERY RESPONSIVE */
@@ -606,5 +605,25 @@ a {
         font-size: 0.55rem;
     }
 }
-=======
->>>>>>> 4eaaf78d80abcb96d28ad4ac186aa1ff823794ce
+
+/* ===== FOOTER SOCIAL ICONS ===== */
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-social a {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #f57c00 !important;
+    transform: translateY(-4px) scale(1.1);
+}
